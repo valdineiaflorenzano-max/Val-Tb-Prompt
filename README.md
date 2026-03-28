@@ -30,3 +30,27 @@ Pontuação:85
 Próxima ação:Agendar reunião/ligação
 Justificativa :O lead demonstra interesse claro, menciona valores e indica intenção de contratação no curto prazo.
 Mensagem do lead:[COLE AQUI] "Oi, vi o site de vocês e queria saber mais sobre os serviços e valores. Tenho interesse em contratar ainda esse mês."
+
+
+Descrição dos Módulos da Automação
+
+1. Webhook (Entrada de Dados):
+Responsável por receber os dados do lead enviados pelo formulário, WhatsApp ou outro canal. É o ponto de início da automação.
+
+2. Módulo de Preparação de Dados (Formatter / Set):
+Organiza e limpa as informações recebidas, garantindo que os dados estejam no formato correto antes de serem processados pela IA.
+
+3. OpenAI (ChatGPT):
+Faz a análise da mensagem do lead. Classifica o nível de interesse (quente, morno ou frio), atribui uma pontuação e sugere a próxima ação com base no prompt configurado.
+
+4. Módulo de Decisão (IF / Switch):
+Avalia a classificação do lead e define o caminho que ele vai seguir dentro do fluxo (ex: priorizar leads quentes).
+
+5. Google Sheets (Armazenamento):
+Registra todas as informações do lead, incluindo dados capturados e análise feita pela IA, em uma planilha para controle e acompanhamento.
+
+6. Módulo de Notificação (Opcional):
+Envia alertas para a equipe (ex: e-mail, Slack ou WhatsApp) quando um lead qualificado é identificado.
+
+💡 Resumo na lata:
+Cada módulo tem uma função clara — receber, organizar, analisar, decidir e salvar.
